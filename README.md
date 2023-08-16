@@ -4,7 +4,7 @@ A Singularity container for HPC headless GPU rendering, developed specially for 
 ## Definition file
 The container has three libraries installed: _MineRL_, _Stable-baselines3_ (for RL algorithms implementations) and _Wandb_ (for monitoring purposes). Feel free to uninstall any library that you may not need, this are the three libraries that I've used to do my executions.
 
-Also, make sure to change the `mkdir -p` at the end of the _%post_ section to match the folder that contains the python script you're going to execute.
+Also, make sure to change the `mkdir -p` at the end of the _%post_ section to match the folder that contains the python script you're going to run.
 
 ## Build
 Since Singularity `build` command needs `sudo` to be run, if your are executing this on a HPC cluster, you probably don't have root permissions, therefore you will need to build the .sif file in other computer and then move it to your cluster (you can use `scp` command for it).
